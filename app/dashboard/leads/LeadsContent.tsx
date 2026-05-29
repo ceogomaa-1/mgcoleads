@@ -80,7 +80,7 @@ export function LeadsContent() {
         subtitle={`${(data?.total ?? 0).toLocaleString()} total leads`}
         actions={
           <Link
-            href="/scrape"
+            href="/dashboard/scrape"
             style={{
               background: 'var(--electric)',
               color: '#0A0A0B',

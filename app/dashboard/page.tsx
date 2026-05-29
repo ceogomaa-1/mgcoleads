@@ -123,7 +123,7 @@ export default function DashboardPage() {
               Top 10 Hot Leads
             </p>
             <Link
-              href="/leads?tier=A"
+              href="/dashboard/leads?tier=A"
               style={{ fontSize: 12, color: 'var(--electric)', textDecoration: 'none' }}
             >
               View all →

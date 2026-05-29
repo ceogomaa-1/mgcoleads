@@ -179,7 +179,7 @@ export default function RunsPage() {
         subtitle={`${(runs?.length ?? 0)} total runs`}
         actions={
           <Link
-            href="/scrape"
+            href="/dashboard/scrape"
             style={{
               background: 'var(--electric)',
               color: '#0A0A0B',

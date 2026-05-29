@@ -6,11 +6,11 @@ import { useEffect, useRef, useState } from 'react'
 import { useSearchStore } from '@/hooks/useSearchStore'
 
 const BREADCRUMB_MAP: Record<string, string> = {
-  '/': 'Dashboard',
-  '/leads': 'Leads',
-  '/scrape': 'New Scrape',
-  '/runs': 'Scrape Runs',
-  '/settings': 'Settings',
+  '/dashboard': 'Dashboard',
+  '/dashboard/leads': 'Leads',
+  '/dashboard/scrape': 'New Scrape',
+  '/dashboard/runs': 'Scrape Runs',
+  '/dashboard/settings': 'Settings',
 }
 
 export function Topbar() {
@@ -22,7 +22,7 @@ export function Topbar() {
 
   const breadcrumb = BREADCRUMB_MAP[pathname] ?? pathname.split('/').filter(Boolean).pop() ?? 'mgcoleads'
 
-  // `/` key focuses search
+  // Keyboard shortcuts
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       const target = e.target as HTMLElement
@@ -31,11 +31,9 @@ export function Topbar() {
         e.preventDefault()
         searchRef.current?.focus()
       }
-      // `n` → new scrape
       if (!isInput && e.key === 'n') {
-        router.push('/scrape')
+        router.push('/dashboard/scrape')
       }
-      // `g` then `l` / `g` then `d`
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
@@ -44,8 +42,7 @@ export function Topbar() {
   function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>) {
     const val = e.target.value
     setSearchValue(val)
-    // Only propagate global search on leads page
-    if (pathname === '/leads') {
+    if (pathname === '/dashboard/leads') {
       setGlobalSearch(val)
     }
   }
@@ -56,8 +53,8 @@ export function Topbar() {
       setSearchValue('')
       setGlobalSearch('')
     }
-    if (e.key === 'Enter' && searchValue && pathname !== '/leads') {
-      router.push(`/leads?search=${encodeURIComponent(searchValue)}`)
+    if (e.key === 'Enter' && searchValue && pathname !== '/dashboard/leads') {
+      router.push(`/dashboard/leads?search=${encodeURIComponent(searchValue)}`)
     }
   }
 
@@ -91,13 +88,7 @@ export function Topbar() {
           mgcoleads
         </span>
         <span style={{ color: 'var(--border-hover)' }}>/</span>
-        <span
-          style={{
-            color: 'var(--text-primary)',
-            fontSize: 13,
-            fontWeight: 500,
-          }}
-        >
+        <span style={{ color: 'var(--text-primary)', fontSize: 13, fontWeight: 500 }}>
           {breadcrumb}
         </span>
       </div>

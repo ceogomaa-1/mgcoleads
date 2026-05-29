@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\Mohamed Gomaa\\\\Documents\\\\mgcoleads\" -Force)",
+      "Bash(Select-Object Name, LastWriteTime)",
+      "Bash(Format-Table)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --app --no-git --eslint --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install *)",
+      "Bash(npx shadcn@latest init --yes --defaults)",
+      "Bash(npx shadcn@latest add input select dropdown-menu dialog drawer table badge popover command toast separator scroll-area --yes)",
+      "Bash(npx shadcn@latest add input select dropdown-menu dialog drawer table badge popover command separator scroll-area sonner slider --yes)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\('Next:', d['dependencies'].get\\('next'\\)\\); print\\('React:', d['dependencies'].get\\('react'\\)\\)\")",
+      "Bash(mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/leads\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/leads/[id]\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/scrape\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/runs\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/settings\" && echo \"done\")",
+      "Bash(mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/api/scrape/status/[id]\")",
+      "Bash(mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/api/leads/[id]/outreach\")",
+      "Bash(npx tsc *)",
+      "Bash(npm run *)",
+      "Bash(ls \"c:/Users/Mohamed Gomaa/.claude/projects/c--Users-Mohamed-Gomaa-Documents-mgcoleads/memory/\" 2>/dev/null && echo \"EXISTS\" || echo \"EMPTY\")",
+      "Read(//c/Users/Mohamed Gomaa/.claude/projects/c--Users-Mohamed-Gomaa-Documents-mgcoleads/memory/**)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(npx vercel *)",
+      "Bash(git rm *)",
+      "Bash(mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/leads/[id]\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/runs\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/scrape\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/settings\" && mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/login\" && echo \"dirs created\")",
+      "Bash(cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/layout.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/layout.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/page.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/page.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/leads/page.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/leads/page.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/leads/LeadsContent.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/leads/LeadsContent.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/leads/[id]/page.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/leads/[id]/page.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/runs/page.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/runs/page.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/scrape/page.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/scrape/page.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(dashboard\\)/settings/page.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/settings/page.tsx\" && cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/\\(auth\\)/login/page.tsx\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/login/page.tsx\" && echo \"all copied\")",
+      "Bash(sed -i 's|href=\"/scrape\"|href=\"/dashboard/scrape\"|g; s|href=\"/runs\"|href=\"/dashboard/runs\"|g; s|href=\"/leads|href=\"/dashboard/leads|g' \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/components/dashboard/RecentRunsTable.tsx\")",
+      "Bash(sed -i 's|href=\"/scrape\"|href=\"/dashboard/scrape\"|g' \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/leads/LeadsContent.tsx\")",
+      "Bash(sed -i \"s|router.push\\('/runs'\\)|router.push\\('/dashboard/runs'\\)|g\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/scrape/page.tsx\")",
+      "Bash(sed -i 's|href=\"/scrape\"|href=\"/dashboard/scrape\"|g' \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/runs/page.tsx\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\(dashboard)\\leads",
+      "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\dashboard\\leads",
+      "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\(dashboard)\\leads\\[id]"
+    ]
+  }
+}

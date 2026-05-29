@@ -2,7 +2,6 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
 import {
   LayoutDashboard,
   Users,
@@ -18,11 +17,11 @@ import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
 
 const NAV_ITEMS = [
-  { href: '/', label: 'Dashboard', icon: LayoutDashboard, shortcut: 'gd' },
-  { href: '/leads', label: 'Leads', icon: Users, shortcut: 'gl' },
-  { href: '/scrape', label: 'New Scrape', icon: Search, shortcut: 'n' },
-  { href: '/runs', label: 'Scrape Runs', icon: History },
-  { href: '/settings', label: 'Settings', icon: Settings },
+  { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/dashboard/leads', label: 'Leads', icon: Users },
+  { href: '/dashboard/scrape', label: 'New Scrape', icon: Search },
+  { href: '/dashboard/runs', label: 'Scrape Runs', icon: History },
+  { href: '/dashboard/settings', label: 'Settings', icon: Settings },
 ]
 
 export function Sidebar() {
@@ -94,9 +93,7 @@ export function Sidebar() {
       {/* Navigation */}
       <nav style={{ flex: 1, padding: '12px 8px', display: 'flex', flexDirection: 'column', gap: 2 }}>
         {NAV_ITEMS.map(item => {
-          const isActive = item.href === '/'
-            ? pathname === '/'
-            : pathname.startsWith(item.href)
+          const isActive = pathname === item.href || (item.href !== '/dashboard' && pathname.startsWith(item.href))
           const Icon = item.icon
 
           return (

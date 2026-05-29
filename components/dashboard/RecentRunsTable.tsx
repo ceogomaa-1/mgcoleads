@@ -59,7 +59,7 @@ export function RecentRunsTable() {
         <div style={{ padding: '24px 0', textAlign: 'center' }}>
           <p style={{ color: 'var(--text-muted)', fontSize: 13 }}>No scrape runs yet.</p>
           <Link
-            href="/scrape"
+            href="/dashboard/scrape"
             style={{ color: 'var(--electric)', fontSize: 13, textDecoration: 'none', marginTop: 4, display: 'inline-block' }}
           >
             Start your first scrape →
@@ -109,7 +109,7 @@ export function RecentRunsTable() {
       {recent.length > 0 && (
         <div style={{ marginTop: 12, textAlign: 'right' }}>
           <Link
-            href="/runs"
+            href="/dashboard/runs"
             style={{ fontSize: 12, color: 'var(--electric)', textDecoration: 'none' }}
           >
             View all runs →
