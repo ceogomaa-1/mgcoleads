@@ -1,0 +1,187 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-destructive: var(--destructive);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-panel: var(--panel);
+  --color-panel-hover: var(--panel-hover);
+  --color-electric: var(--electric);
+  --color-tier-a: var(--tier-a);
+  --color-tier-b: var(--tier-b);
+  --color-tier-c: var(--tier-c);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+:root {
+  /* Base backgrounds */
+  --background: #0A0A0B;
+  --panel: #111114;
+  --panel-hover: #15151A;
+  --foreground: #FAFAFA;
+
+  /* Borders */
+  --border: #1F1F26;
+  --border-hover: #2A2A33;
+  --input: #1F1F26;
+  --ring: #00D9FF;
+
+  /* Text */
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;
+  --text-muted: #52525B;
+
+  /* Brand accent */
+  --electric: #00D9FF;
+
+  /* Tier colors */
+  --tier-a: #FF3B30;
+  --tier-b: #FF9500;
+  --tier-c: #71717A;
+
+  /* Status */
+  --success: #30D158;
+  --danger: #FF453A;
+  --destructive: #FF453A;
+
+  /* shadcn mappings */
+  --card: #111114;
+  --card-foreground: #FAFAFA;
+  --popover: #111114;
+  --popover-foreground: #FAFAFA;
+  --primary: #00D9FF;
+  --primary-foreground: #0A0A0B;
+  --secondary: #15151A;
+  --secondary-foreground: #FAFAFA;
+  --muted: #15151A;
+  --muted-foreground: #71717A;
+  --accent: #15151A;
+  --accent-foreground: #FAFAFA;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  /* Remove default outlines, use focus-visible instead */
+  *:focus {
+    outline: none;
+  }
+  *:focus-visible {
+    outline: 2px solid var(--electric);
+    outline-offset: 2px;
+  }
+  /* Tabular numerals for all stat displays */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3F3F46;
+  }
+}
+
+/* Typography */
+.text-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.text-body {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Transition defaults */
+.transition-default {
+  transition: all 150ms ease-out;
+}
+
+/* Score bar */
+.score-bar {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 300ms ease-out;
+}
+
+/* Panel base */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Skeleton pulse animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.skeleton {
+  background: var(--border);
+  border-radius: 4px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
