@@ -27,7 +27,12 @@
       "Bash(sed -i 's|href=\"/scrape\"|href=\"/dashboard/scrape\"|g; s|href=\"/runs\"|href=\"/dashboard/runs\"|g; s|href=\"/leads|href=\"/dashboard/leads|g' \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/components/dashboard/RecentRunsTable.tsx\")",
       "Bash(sed -i 's|href=\"/scrape\"|href=\"/dashboard/scrape\"|g' \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/leads/LeadsContent.tsx\")",
       "Bash(sed -i \"s|router.push\\('/runs'\\)|router.push\\('/dashboard/runs'\\)|g\" \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/scrape/page.tsx\")",
-      "Bash(sed -i 's|href=\"/scrape\"|href=\"/dashboard/scrape\"|g' \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/runs/page.tsx\")"
+      "Bash(sed -i 's|href=\"/scrape\"|href=\"/dashboard/scrape\"|g' \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/runs/page.tsx\")",
+      "Bash(find \"c:/Users/Mohamed Gomaa/Documents\" -name \"jarvisVoice.js\" -o -name \"jarvisVoice.ts\" 2>/dev/null | head -10)",
+      "Read(//c/Users/Mohamed Gomaa/Documents/**)",
+      "Bash(ls \"c:/Users/Mohamed Gomaa/Documents/\" 2>/dev/null)",
+      "Bash(node -e \"const p=require\\('c:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/next/package.json'\\); console.log\\('next installed:', p.version\\)\")",
+      "Bash(node -e \"const p=require\\('C:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/next/package.json'\\); console.log\\('next:', p.version, '| react:', require\\('C:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/react/package.json'\\).version\\)\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\(dashboard)\\leads",
