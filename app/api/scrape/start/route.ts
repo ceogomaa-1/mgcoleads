@@ -1,5 +1,5 @@
 import { createServiceClient } from '@/lib/supabase/server'
-import { NextResponse, type NextRequest, after } from 'next/server'
+import { NextResponse, type NextRequest } from 'next/server'
 import { INDUSTRIES } from '@/lib/scraper/industries'
 import { textSearch, getPlaceDetails, estimateCost } from '@/lib/scraper/google-places'
 import { scoreBusiness } from '@/lib/scraper/scoring-engine'
@@ -161,10 +161,8 @@ export async function POST(request: NextRequest) {
 
   if (error) return NextResponse.json({ error: error.message }, { status: 500 })
 
-  // Fire and forget using `after` (Next.js 15+) or fallback
-  after(async () => {
-    await runScrape(run.id, industries, cities)
-  })
+  // Fire-and-forget — Vercel keeps the function alive while async work is pending
+  void runScrape(run.id, industries, cities)
 
   return NextResponse.json({ run_id: run.id, total_queries: totalQueries, estimated_cost: estimatedCost })
 }
