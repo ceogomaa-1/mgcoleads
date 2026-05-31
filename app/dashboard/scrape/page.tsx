@@ -59,8 +59,7 @@ export default function ScrapePage() {
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data.error)
-      toast.success('Scrape started — leads will appear as they\'re found.')
-      router.push('/dashboard/runs')
+      router.push(`/dashboard/runs/${data.run_id}`)
     } catch (err) {
       toast.error(err instanceof Error ? err.message : 'Failed to start scrape')
     } finally {

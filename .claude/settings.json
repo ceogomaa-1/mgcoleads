@@ -32,12 +32,38 @@
       "Read(//c/Users/Mohamed Gomaa/Documents/**)",
       "Bash(ls \"c:/Users/Mohamed Gomaa/Documents/\" 2>/dev/null)",
       "Bash(node -e \"const p=require\\('c:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/next/package.json'\\); console.log\\('next installed:', p.version\\)\")",
-      "Bash(node -e \"const p=require\\('C:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/next/package.json'\\); console.log\\('next:', p.version, '| react:', require\\('C:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/react/package.json'\\).version\\)\")"
+      "Bash(node -e \"const p=require\\('C:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/next/package.json'\\); console.log\\('next:', p.version, '| react:', require\\('C:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/react/package.json'\\).version\\)\")",
+      "Bash(npm show *)",
+      "Bash(python3 -c \"import sys,json; vs=json.load\\(sys.stdin\\); print\\([v for v in vs if v.startswith\\('2.'\\)][-10:]\\)\")",
+      "Bash(python3 -c \"import sys,json; vs=json.load\\(sys.stdin\\); stable=[v for v in vs if v.startswith\\('2.'\\) and '-' not in v]; print\\(stable[-20:]\\)\")",
+      "Bash(python3 -c \"import sys,json; vs=json.load\\(sys.stdin\\); print\\([v for v in vs if v.startswith\\('1.'\\)][:10]\\)\")",
+      "Bash(python3 -c \"import sys; data = sys.stdin.read\\(\\); print\\(data\\)\")",
+      "Bash(git commit -m 'fix: add vercel.json with explicit installCommand to bypass cache issues *)",
+      "Bash(cat \"C:/Users/Mohamed Gomaa/AppData/Local/npm-cache/_logs/2026-05-30T23_26_27_960Z-debug-0.log\" 2>/dev/null | grep -A5 \"invalid version\\\\|Invalid Version\\\\|ERR!\" | head -40)",
+      "Read(//c/Users/Mohamed Gomaa/AppData/Local/npm-cache/_logs/**)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\([k for k in d if 'inquirer' in k]\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\); print\\('peerDeps:', d.get\\('peerDependencies'\\)\\)\")",
+      "Bash(node -e \"console.log\\(require\\('c:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/mute-stream/package.json'\\).version\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\('version:', d.get\\('version'\\)\\); print\\('engines:', d.get\\('engines'\\)\\)\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\([\\(k,v\\) for k,v in d.items\\(\\) if 'typescript-eslint' in k or 'typescript' in k]\\)\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const dirs=fs.readdirSync\\('c:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules'\\); const bad=dirs.filter\\(d=>{ try{ const p=require\\('c:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/'+d+'/package.json'\\); return !p.version || p.version==='' } catch{ return false } }\\); console.log\\('Empty version packages:', bad\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"const p=require\\('c:/Users/Mohamed Gomaa/Documents/mgcoleads/node_modules/@supabase/supabase-js/package.json'\\); console.log\\('version:', p.version\\)\")",
+      "Bash(npm cache *)",
+      "Bash(python3 -c \"import sys,json; print\\(json.load\\(sys.stdin\\)\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(mkdir -p /tmp/mgctest)",
+      "Bash(cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/package.json\" /tmp/mgctest/)",
+      "Bash(cp \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/.npmrc\" /tmp/mgctest/)",
+      "Read(//tmp/**)",
+      "Bash(python3 -c \"import sys,json; vs=json.load\\(sys.stdin\\); stable=[v for v in vs if v.startswith\\('15.'\\) and '-' not in v]; print\\('Latest 15.x:', stable[-5:]\\)\")",
+      "Bash(mkdir -p \"c:/Users/Mohamed Gomaa/Documents/mgcoleads/app/dashboard/runs/[id]\" && echo \"done\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\(dashboard)\\leads",
       "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\dashboard\\leads",
-      "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\(dashboard)\\leads\\[id]"
+      "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\(dashboard)\\leads\\[id]",
+      "c:\\Users\\Mohamed Gomaa\\Documents\\mgcoleads\\app\\dashboard\\runs"
     ]
   }
 }
